@@ -1,0 +1,15 @@
+.message {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: #fff;
+  margin-bottom: 16px;
+  font-family: Mali, cursive;
+  font-size: 16px;
+}
+
+.divMessages {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
