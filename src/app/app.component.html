@@ -4,9 +4,9 @@
     <p>This is not a certified translator.</p>
     <p>But you can try to talk with your cat, just for fun.😅</p>
     <div>
-      <app-message [testArray]="messageArray"></app-message>
+      <app-message [messageArrayChild]="messageArray"></app-message>
 
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="traductionForm" (ngSubmit)="onSubmit()">
         <div class="divText">
           <textarea
             formControlName="message"

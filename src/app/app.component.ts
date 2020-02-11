@@ -11,13 +11,13 @@ export class AppComponent implements OnInit {
   messageArray: any = [
     CatTranslator.translateText("Hi,beautiful cat.How are you?")
   ];
-  testObject: any = {};
-  registerForm: FormGroup;
+
+  traductionForm: FormGroup;
   submitted = false;
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
+    this.traductionForm = this.formBuilder.group({
       message: ["", Validators.required]
     });
   }
@@ -25,15 +25,15 @@ export class AppComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
 
-    const messageString = this.registerForm.value.message.toString();
+    const messageString = this.traductionForm.value.message.toString();
 
     this.messageArray.push(CatTranslator.translateText(messageString));
 
-    this.registerForm.reset();
+    this.traductionForm.reset();
   }
 
   onReset() {
     this.submitted = false;
-    this.registerForm.reset();
+    this.traductionForm.reset();
   }
 }
