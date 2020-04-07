@@ -1,0 +1,9 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div><label>Email</label><input formControlName="email" type="email" /></div>
+  <div>
+    <label>Password</label><input formControlName="password" type="password" />
+  </div>
+  <div>
+    <button class="button" >Validate</button>
+  </div>
+</form>

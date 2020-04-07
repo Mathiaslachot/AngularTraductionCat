@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="left">
+      <h1>Meow translator</h1>
+      <p>This is not a certified translator.</p>
+      <p>But you can try to talk with your cat, just for fun.😅</p>
+      <div>
+        <app-message [messageArrayChild]="messageArray"></app-message>
+  
+        <form [formGroup]="traductionForm" (ngSubmit)="onSubmit()">
+          <div class="divText">
+            <textarea
+              formControlName="message"
+              class="text"
+              placeholder="Texte à traduire"
+            ></textarea>
+          </div>
+          <div>
+            <button class="button">Translate</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+  
