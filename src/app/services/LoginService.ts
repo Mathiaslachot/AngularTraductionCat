@@ -10,17 +10,24 @@ export default class LoginService {
 
   }
 
+  user = [
+    {
+      email: "test.test@test.fr",
+      password: "azerty"
+    }
+  ]
+
 
   connect(event) {
-   console.log({connected: this.connected.getValue()});
-   console.log({event: event});
-   
-    if (event) {
-      this.connected.next(true);
+    for (let index = 0; index < this.user.length; index++) {
+      const element = this.user[index];
+      if (element.email ===  event.email && element.password === event.password) {
+        this.connected.next(true);
       this.router.navigate(["/home"]);
-    } else {
-      this.connected.next(false);
+      } else {
+        this.connected.next(false);
+      }
+      
     }
-    console.log({connected: this.connected.getValue()});
   }
 }

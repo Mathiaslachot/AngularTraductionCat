@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9f1ff;
+  }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.emailDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwordDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+}

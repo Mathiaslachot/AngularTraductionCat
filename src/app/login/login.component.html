@@ -1,9 +1,13 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-  <div><label>Email</label><input formControlName="email" type="email" /></div>
-  <div>
-    <label>Password</label><input formControlName="password" type="password" />
-  </div>
-  <div>
-    <button class="button" >Validate</button>
-  </div>
-</form>
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form">
+      <div class="emailDiv"><label>Email</label><input formControlName="email" type="email" /></div>
+      <div class="passwordDiv">
+        <label>Password</label><input formControlName="password" type="password" />
+      </div>
+      <div class="buttonDiv">
+        <button class="button" >Validate</button>
+      </div>
+    </div>
+  </form>
+</div>
